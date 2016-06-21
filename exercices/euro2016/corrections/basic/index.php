@@ -137,7 +137,7 @@ function renderGroupMatches($group):string
         for($i = $count; $i < 4 ; $i++ ){
             $t = $teams[$i];
             if( $t->nom != $team->nom )
-                $content .= p(tagImG($team->url,20,30).$team->nom . '-'.tagImG($t->url,20,30). $t->nom);
+                $content .= p(tagImg($team->url,20,30).$team->nom . '-'.tagImg($t->url,20,30). $t->nom);
         }
         $count++;
         return $content;
