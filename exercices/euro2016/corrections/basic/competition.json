@@ -4,10 +4,7 @@
     {
       "id":"A",
       "teams": [
-        {
-          "nom": "France",
-          "flag": "flags/france.png"
-        },
+        "France",
         "Roumanie",
         "Albanie",
         "Suisse"

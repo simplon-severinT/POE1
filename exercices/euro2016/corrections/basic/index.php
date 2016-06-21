@@ -95,19 +95,30 @@ function renderGroupPage(string $groupId):string
     initData(PATH_DATA);
 
     // TODO sécuriser : gérer id invalides
-    $selectedGroups = array_filter(
-        $competition->groups,
-        function ($group) use ($groupId) {
-            //echo $groupId." / " .$group->id.B;
-            return $group->id == $groupId;
-        });
-    if( count($selectedGroups)>0 )
-        $selectedGroup = $selectedGroups[array_keys($selectedGroups)[0]];
-
-    $content = renderHeader($competition);
-    $content .= ahref(PATH_APP,"Retour aux groupes" );
-    //$content .= renderHeader($competition);
-    $content .= renderGroupMatches($selectedGroup);
+    $idCheck = "";
+    foreach ($competition->groups as $group){
+        if($groupId === $group->id){
+                $idCheck = $groupId;
+        }
+        if($idCheck !== "") {
+            $selectedGroups = array_filter(
+                $competition->groups,
+                function ($group) use ($groupId) {
+                    //echo $groupId." / " .$group->id.B;
+                    return $group->id == $groupId;
+                }
+            );
+            if( count($selectedGroups)>0 )
+                $selectedGroup = $selectedGroups[array_keys($selectedGroups)[0]];
+            $content = renderHeader($competition);
+            $content .= ahref(PATH_APP,"Retour aux groupes" );
+            //$content .= renderHeader($competition);
+            $content .= renderGroupMatches($selectedGroup);
+        }
+        else{
+            $content = "Le groupe sélectionné n'exsite pas !";
+        }
+    }
 
     return $content/*p($competition->name)*/
         ;

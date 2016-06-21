@@ -201,7 +201,7 @@ class Competition
      * initialisation des données à partir d'un objet stdClass
      * @param $src
      */
-    private function initData(string $src)
+    private function initData($src)
     {
         $this->name = $src->name;
 
