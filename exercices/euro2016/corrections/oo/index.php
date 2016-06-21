@@ -106,7 +106,7 @@ class IndexView
     {
         $view = '';
         foreach ($group->teams as $team) {
-            $view .= HTMLUtils::tag('p', $team);
+            $view .= HTMLUtils::tag('p', "<img style='height:20px;width:30px;'  src='".$team->url."'/>".$team->nom);
         }
         return $view;
     }
