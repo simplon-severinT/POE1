@@ -78,7 +78,7 @@ function getGroupView($group)
 {
     $content = ahref(PATH_APP . '?selectedGroupId=' . $group->id, $group->id);
     foreach ($group->teams as $team) {
-        $content .= p("<img style='height:20px;width:30px;'  src='".$team->url."'/>".$team->nom);
+        $content .= p(tagImG($team->url,20,30).$team->nom);
     }
     return $content;
 }
@@ -137,7 +137,7 @@ function renderGroupMatches($group):string
         for($i = $count; $i < 4 ; $i++ ){
             $t = $teams[$i];
             if( $t->nom != $team->nom )
-                $content .= p($team->nom . '-' . $t->nom);
+                $content .= p(tagImG($team->url,20,30).$team->nom . '-'.tagImG($t->url,20,30). $t->nom);
         }
         $count++;
         return $content;
@@ -166,6 +166,18 @@ function tag(string $tag, string $str):string
 {
     return "<" . $tag . ">" . $str . "</" . $tag . ">";
 }
+/**
+ * créé une balise image
+ * @param  string $src
+ * @param  int $height
+ * @param  int $width
+ * @return string
+ */
+function tagImG(string $src,int $height, int $width):string
+{
+    return "<img src='".$src."' style='height:".$height."px;width:".$width."px;'/>";
+}
+
 
 /**
  * renvoie un lien html basé sur une url et un texte affiché

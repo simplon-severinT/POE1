@@ -106,7 +106,7 @@ class IndexView
     {
         $view = '';
         foreach ($group->teams as $team) {
-            $view .= HTMLUtils::tag('p', "<img style='height:20px;width:30px;'  src='".$team->url."'/>".$team->nom);
+            $view .= HTMLUtils::tag('p', HTMLUtils::tagImg($team->url,20,30).$team->nom);
         }
         return $view;
     }
@@ -165,7 +165,7 @@ class GroupView{
             for($i = $count; $i < 4 ; $i++ ){
                 $t = $teams[$i];
                 if( $t->nom != $team->nom )
-                    $content .= HTMLUtils::tag('p', $team->nom . '-' . $t->nom);
+                    $content .= HTMLUtils::tag('p',HTMLUtils::tagImg($team->url,20,30).$team->nom . '-' . HTMLUtils::tagImg($t->url,20,30). $t->nom);
             }
             $count++;
             return $content;
@@ -280,6 +280,11 @@ class HTMLUtils
     static public function tag(string $tag, string $str):string
     {
         return "<" . $tag . ">" . $str . "</" . $tag . ">";
+    }
+    
+    static function tagImg(string $src, int $height, int $width):string
+    {
+        return "<img src='".$src."' style='height:".$height."px;width:".$width."px;'/>";
     }
 
     /**
