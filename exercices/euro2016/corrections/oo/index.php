@@ -120,6 +120,7 @@ class GroupView{
      * @var Competition
      */
     private $compet;
+    private $groupId;
     private $group;
 
     /**
@@ -130,22 +131,23 @@ class GroupView{
     public function __construct(Competition $compet, string $groupId )
     {
         $this->compet = $compet;
-
-        $this->group = $compet->getGroupById($groupId); // TODO gestion d'erreur
+        $this->group = $compet->getGroupById($groupId);
     }
 
     public function render():string
     {
-        $view = HTMLUtils::tag('h1', $this->compet->name);
-        $view .= HTMLUtils::ahref(PATH_APP, "Retour à la liste");
-        $view .= HTMLUtils::tag('h2', "Groupe " . $this->group->id);
+        if($this->group != null ) {
+            $view = HTMLUtils::tag('h1', $this->compet->name);
+            $view .= HTMLUtils::ahref(PATH_APP, "Retour à la liste");
+            $view .= HTMLUtils::tag('h2', "Groupe " . $this->group->id);
 
-        $view .= $this->renderMatches($this->group->teams);
+            $view .= $this->renderMatches($this->group->teams);
+        }
+        else{
+            $view = HTMLUtils::ahref(PATH_APP, "Retour à la liste");
+            $view .= HTMLUtils::tag('h2', "Cette page n'existe pas ");
+        }
 
-        /*foreach ($this->group->teams as $team) {
-            //$view .= Utils::ahref(PATH_APP . '?selectedGroupId=' . $group->id, Utils::tag('h2', $group->id));
-            $view .= $this->renderMatch($teams);
-        }*/
 
         return $view;
     }
@@ -215,9 +217,9 @@ class Competition
     /**
      * renvoie le groupe
      * @param $groupId
-     * @return Group
      */
-    public function getGroupById($groupId):Group
+
+    public function getGroupById($groupId)
     {
         $selectedGroups = array_filter(
             $this->groups,
@@ -225,10 +227,10 @@ class Competition
                 //echo $groupId." / " .$group->id.B;
                 return $group->id == $groupId;
             });
-        if (count($selectedGroups) > 0)
+        if (count($selectedGroups) > 0) {
             $selectedGroup = $selectedGroups[array_keys($selectedGroups)[0]];
-
-        return $selectedGroup;
+            return $selectedGroup;
+        }
     }
 }
 
