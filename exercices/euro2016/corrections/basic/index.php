@@ -136,8 +136,8 @@ function renderGroupMatches($group):string
         $content = '';
         for($i = $count; $i < 4 ; $i++ ){
             $t = $teams[$i];
-            if( $t != $team )
-                $content .= p($team . '-' . $t);
+            if( $t->nom != $team->nom )
+                $content .= p($team->nom . '-' . $t->nom);
         }
         $count++;
         return $content;

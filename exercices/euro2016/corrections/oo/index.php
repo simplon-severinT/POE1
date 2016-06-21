@@ -164,8 +164,8 @@ class GroupView{
             $content = '';
             for($i = $count; $i < 4 ; $i++ ){
                 $t = $teams[$i];
-                if( $t != $team )
-                    $content .= HTMLUtils::tag('p', $team . '-' . $t);
+                if( $t->nom != $team->nom )
+                    $content .= HTMLUtils::tag('p', $team->nom . '-' . $t->nom);
             }
             $count++;
             return $content;
