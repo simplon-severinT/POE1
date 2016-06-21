@@ -78,7 +78,7 @@ function getGroupView($group)
 {
     $content = ahref(PATH_APP . '?selectedGroupId=' . $group->id, $group->id);
     foreach ($group->teams as $team) {
-        $content .= p($team->nom);
+        $content .= p("<img style='height:20px;width:30px;'  src='".$team->url."'/>".$team->nom);
     }
     return $content;
 }

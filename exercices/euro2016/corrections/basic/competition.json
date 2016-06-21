@@ -6,19 +6,19 @@
       "teams": [
         {
          "nom":"France",
-          "url":"../dapeaux/France.png"
+          "url":"../drapeaux/France.png"
         },
         {
           "nom":"Roumanie",
-          "url":"../dapeaux/Roumanie.png"
+          "url":"../drapeaux/Roumanie.png"
         },
         {
           "nom":"Albanie",
-          "url":"../dapeaux/Albanie.png"
+          "url":"../drapeaux/Albanie.png"
         },
         {
           "nom":"Suisse",
-          "url":"../dapeaux/Suisse.png"
+          "url":"../drapeaux/Suisse.png"
         }
       ]
     },
@@ -27,19 +27,19 @@
       "teams": [
         {
           "nom":"Angleterre",
-          "url":"../dapeaux/Angleterre.png"
+          "url":"../drapeaux/Angleterre.png"
         },
         {
           "nom":"Russie",
-          "url":"../dapeaux/Russie.png"
+          "url":"../drapeaux/Russie.png"
         },
         {
           "nom":"Pays de Galles",
-          "url":"../dapeaux/Pays_de_Galles.png"
+          "url":"../drapeaux/Pays_de_Galles.png"
         },
         {
           "nom":"Slovaquie",
-          "url":"../dapeaux/Slovaquie.png"
+          "url":"../drapeaux/Slovaquie.png"
         }
       ]
     },
@@ -48,19 +48,19 @@
       "teams":[
         {
           "nom":"Allemagne",
-          "url":"../dapeaux/Allemagne.png"
+          "url":"../drapeaux/Allemagne.png"
         },
         {
           "nom":"Ukraine",
-          "url":"../dapeaux/Ukraine.png"
+          "url":"../drapeaux/Ukraine.png"
         },
         {
           "nom":"Pologne",
-          "url":"../dapeaux/Pologne.png"
+          "url":"../drapeaux/Pologne.png"
         },
         {
           "nom":"Irlande du Nord",
-          "url":"../dapeaux/Irlande_du_Nord.png"
+          "url":"../drapeaux/Irlande_du_Nord.png"
         }
       ]
     },
@@ -69,19 +69,19 @@
       "teams":[
         {
           "nom":"Espagne",
-          "url":"../dapeaux/Espagne.png"
+          "url":"../drapeaux/Espagne.png"
         },
         {
           "nom":"Rép.Tchéque",
-          "url":"../dapeaux/Rep_Tcheque.png"
+          "url":"../drapeaux/Rep_Tcheque.png"
         },
         {
           "nom":"Turquie",
-          "url":"../dapeaux/Turquie.png"
+          "url":"../drapeaux/Turquie.png"
         },
         {
           "nom":"Croatie",
-          "url":"../dapeaux/Croatie.png"
+          "url":"../drapeaux/Croatie.png"
         }
       ]
     },
@@ -90,19 +90,19 @@
       "teams":[
         {
           "nom":"Belgique",
-          "url":"../dapeaux/Espagne.png"
+          "url":"../drapeaux/Espagne.png"
         },
         {
           "nom":"Italie",
-          "url":"../dapeaux/Italie.png"
+          "url":"../drapeaux/Italie.png"
         },
         {
           "nom":"Rép. d'Irlande",
-          "url":"../dapeaux/Rep_Irlande.png"
+          "url":"../drapeaux/Rep_Irlande.png"
         },
         {
           "nom":"Suède",
-          "url":"../dapeaux/Suede.png"
+          "url":"../drapeaux/Suede.png"
         }
       ]
     },
@@ -111,19 +111,19 @@
       "teams":[
         {
           "nom":"Portugal",
-          "url":"../dapeaux/Portugal.png"
+          "url":"../drapeaux/Portugal.png"
         },
         {
           "nom":"Islande",
-          "url":"../dapeaux/Islande.png"
+          "url":"../drapeaux/Islande.png"
         },
         {
           "nom":"Autriche",
-          "url":"../dapeaux/Autriche.png"
+          "url":"../drapeaux/Autriche.png"
         },
         {
           "nom":"Hongrie",
-          "url":"../dapeaux/Hongrie.png"
+          "url":"../drapeaux/Hongrie.png"
         }
       ]
     }
