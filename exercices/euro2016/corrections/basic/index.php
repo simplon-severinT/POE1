@@ -78,7 +78,7 @@ function getGroupView($group)
 {
     $content = ahref(PATH_APP . '?selectedGroupId=' . $group->id, $group->id);
     foreach ($group->teams as $team) {
-        $content .= p($team);
+        $content .= p($team->nom);
     }
     return $content;
 }
@@ -94,7 +94,6 @@ function renderGroupPage(string $groupId):string
 
     initData(PATH_DATA);
 
-    // TODO sécuriser : gérer id invalides
     $idCheck = "";
     foreach ($competition->groups as $group){
         if($groupId === $group->id){
